@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.146" />
         <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
+        <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/layout/activity_main_not_online.xml" value="0.20471014492753623" />
+        <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/layout/activity_second.xml" value="0.17451874366767983" />
+        <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/layout/sample_webview.xml" value="0.17451874366767983" />
+        <entry key="..\:/J/gor/AS_projects/dobro/dobropizza_android_app/app/src/main/res/layout/webview_layout.xml" value="0.17451874366767983" />
       </map>
     </option>
   </component>

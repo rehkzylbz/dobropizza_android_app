@@ -15,7 +15,6 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (isOnline(this)) {
-            //загрузка сайта?
             val webViewMain = WebView(this@SecondActivity)
             webViewMain.webViewClient = WebViewClient()
             webViewMain.settings.javaScriptEnabled = true

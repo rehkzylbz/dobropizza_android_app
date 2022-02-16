@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             // [END log_reg_token]
         }*/
 
-        Toast.makeText(this, "See README for setup instructions", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "See README for setup instructions", Toast.LENGTH_SHORT).show()
 
         val handler = Handler()
         handler.postDelayed(Runnable {

@@ -11,7 +11,7 @@ class DobroWorker(appContext: Context, workerParams: WorkerParameters) : Worker(
 
     override fun doWork(): ListenableWorker.Result {
         Log.d(TAG, "Performing long running task in scheduled job")
-        // TODO(developer): add long running task here.
+        // TODO: add long running task here.
         return ListenableWorker.Result.success()
     }
 

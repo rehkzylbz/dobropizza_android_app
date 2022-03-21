@@ -1,13 +1,14 @@
 package ru.dobropizza_android_app
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class EnterScreen : AppCompatActivity() {
@@ -44,5 +45,17 @@ class EnterScreen : AppCompatActivity() {
             }
         }
         return false
+    }
+
+    fun loadURL(view: View) {
+        val intent = Intent(this@EnterScreen, SecondActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun startCall(view: View) {
+        val phoneNumber ="88005500300";
+        val uri = Uri.parse("tel:"+phoneNumber);
+        val intent = Intent(Intent.ACTION_DIAL,uri);
+        startActivity(intent);
     }
 }

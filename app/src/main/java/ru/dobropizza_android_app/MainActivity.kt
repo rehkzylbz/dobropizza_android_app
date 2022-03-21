@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val handler = Handler()
         handler.postDelayed(Runnable {
-            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            val intent = Intent(this@MainActivity, EnterScreen::class.java)
             startActivity(intent)
             finish()
         }, 2000)

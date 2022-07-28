@@ -7,7 +7,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
-import android.webkit.WebViewClient
+//import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -16,7 +16,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         if (isOnline(this)) {
             val webViewMain = WebView(this@SecondActivity)
-            webViewMain.webViewClient = WebViewClient()
+            //webViewMain.webViewClient = WebViewClient()
+            webViewMain.webViewClient = IgnoreSSLErrorWebViewClient()
             webViewMain.settings.javaScriptEnabled = true
             setContentView(webViewMain)
             webViewMain.loadUrl("https://appi.dobropizza.ru")

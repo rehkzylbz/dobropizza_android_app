@@ -17,7 +17,6 @@ class SecondActivity : AppCompatActivity() {
         if (isOnline(this)) {
             val webViewMain = WebView(this@SecondActivity)
             webViewMain.webViewClient = WebViewClient()
-            //webViewMain.webViewClient = IgnoreSSLErrorWebViewClient()
             webViewMain.settings.javaScriptEnabled = true
             setContentView(webViewMain)
             webViewMain.loadUrl("https://dobropizza.ru")

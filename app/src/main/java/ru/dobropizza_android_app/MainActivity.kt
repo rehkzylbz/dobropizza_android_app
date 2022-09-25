@@ -8,12 +8,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
+import android.webkit.WebView
+import android.webkit.WebViewClient
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val webViewMain = WebView(this@MainActivity)
+        webViewMain.webViewClient = WebViewClient()
+        webViewMain.settings.javaScriptEnabled = true
+        setContentView(webViewMain)
+        webViewMain.loadUrl("file:///android_asset/dobro_hello.gif")
+        webViewMain.settings.useWideViewPort = true
+        webViewMain.settings.loadWithOverviewMode = true
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channelId = getString(R.string.default_notification_channel_id)
@@ -35,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, EnterScreen::class.java)
             startActivity(intent)
             finish()
-        }, 2000)
+        }, 2900)
     }
 
     companion object {

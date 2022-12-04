@@ -7,7 +7,9 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.net.Uri
 import android.os.Build
+import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val webViewMain = WebView(this@MainActivity)
         webViewMain.webViewClient = WebViewClient()
-        webViewMain.settings.javaScriptEnabled = true
+        //webViewMain.settings.javaScriptEnabled = true
         setContentView(webViewMain)
         webViewMain.loadUrl("file:///android_asset/dobro_hello.gif")
         webViewMain.settings.useWideViewPort = true
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         val handler = Handler()
         handler.postDelayed(Runnable {
-            val intent = Intent(this@MainActivity, EnterScreen::class.java)
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
             startActivity(intent)
             finish()
         }, 2900)

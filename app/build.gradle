@@ -11,8 +11,8 @@ android {
         applicationId "ru.dobropizza_android_app"
         minSdk 21
         targetSdk 31
-        versionCode 8
-        versionName "1.8"
+        versionCode 10
+        versionName "1.10"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -62,4 +62,9 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:7.2.0'
 
     implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    //Google Play Billing Library
+    def billingVersion = "5.0.0"
+
+    implementation "com.android.billingclient:billing:$billingVersion"
 }

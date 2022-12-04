@@ -1,11 +1,14 @@
 package ru.dobropizza_android_app
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +22,7 @@ class SecondActivity : AppCompatActivity() {
             webViewMain.webViewClient = WebViewClient()
             webViewMain.settings.javaScriptEnabled = true
             setContentView(webViewMain)
-            webViewMain.loadUrl("https://dobropizza.ru")
+            webViewMain.loadUrl("https://appi.dobropizza.ru")
         }
         else {
             setContentView(R.layout.activity_main_not_online)
@@ -50,5 +53,12 @@ class SecondActivity : AppCompatActivity() {
             }
         }
         return false
+    }
+
+    fun startCall(view: View) {
+        val phoneNumber ="88005500300";
+        val uri = Uri.parse("tel:$phoneNumber");
+        val intent = Intent(Intent.ACTION_DIAL,uri);
+        startActivity(intent);
     }
 }
